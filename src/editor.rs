@@ -79,7 +79,6 @@ impl Editor {
         let Size { height, .. } = Terminal::size()?;
         for current_row in 0..height {
             Terminal::clear_line()?;
-            Terminal::print("~")?;
             if current_row == height / 3 {
                 Self::draw_welcome_message()?;
             } else {
